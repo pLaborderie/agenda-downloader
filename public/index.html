@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Agenda Downloader</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Choisissez votre section ainsi que la semaine</h1>
+    <small class="infoText">
+      Ces données sont récupérées depuis le lien suivant :
+      <a href="https://www.iutbayonne.univ-pau.fr/outils/edt/default/export">
+        https://www.iutbayonne.univ-pau.fr/outils/edt/default/export
+      </a>
+    </small>
+    <form>
+      <label for="section">Section</label>
+      <br />
+      <div class="select">
+        <select name="section" id="section">
+          <option value="354">S1 - TD 1</option>
+          <option value="357">S1 - TD 2</option>
+          <option value="360">S1 - TD 3</option>
+
+          <option value="367">S2 - TD 1</option>
+          <option value="370">S2 - TD 2</option>
+          <option value="373">S2 - TD 3</option>
+
+          <option value="380">S3 - TD 1</option>
+          <option value="383">S3 - TD 1</option>
+          <option value="279">S3 - TD 1</option>
+
+          <option value="778">S4 - IPI</option>
+          <option value="589">S4 - PEL</option>
+
+          <option value="988">LP Prog Avancée</option>
+          <option value="240">LP Num - Gen/AV</option>
+          <option value="239">LP Num - Info</option>
+        </select>
+      </div>
+
+      <br />
+      <label for="week">Semaine</label>
+      <br />
+      <div class="select">
+        <select name="week" id="week" value="0">
+          <option value="-2">Il y a deux semaines</option>
+          <option value="-1">Il y a une semaine</option>
+          <option value="0">Maintenant</option>
+          <option value="1">Dans une semaine</option>
+          <option value="2">Dans deux semaines</option>
+          <option value="3">Dans trois semaines</option>
+          <option value="4">Dans quatre semaines</option>
+        </select>
+      </div>
+      <br />
+      <button class="downloadBtn" type="button" onclick="download()">
+        Télécharger
+      </button>
+    </form>
+  </div>
+</body>
+
+</html>
